@@ -3,6 +3,67 @@
   <head>
     <title>SHA website</title>
     <style type="text/css">
+      <!-- start of form style -->
+form input,
+form select,
+form textarea,
+form fieldset,
+form optgroup,
+form label,
+.StripeElement {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 90%;
+  padding: 0;
+  margin: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;}
+form label,
+form legend {
+  font-size: 0.825rem;
+  margin-bottom: 0.5rem;}
+/* border, padding, margin, width */
+form input,
+form select,
+form textarea,
+.StripeElement {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75em 1rem;
+  margin-bottom: 1.5rem;}
+form input:focus,
+form select:focus,
+form textarea:focus,
+.StripeElement:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;}
+form [type="text"],
+form [type="email"],
+.StripeElement {
+  width: 100%;}
+form [type="button"],
+form [type="submit"],
+form [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;}
+form [type="button"]:focus,
+form [type="submit"]:focus,
+form [type="reset"]:focus {
+  outline: none;}
+form select {
+  text-transform: none;}
+      <!-- end of form style -->
       header, section, footer, aside, nav, article, figure, figcaption {
         display: block;}
       body {
@@ -106,7 +167,32 @@
           </ul>
         </nav>
       </header>
-      <body> <p style="font-family: 'Courier New', monospace;  color: #000000; font-size:25px"> &nbsp Fill out the form below if you would like to suggest anything: <br><br> </p> <p style="text-align: center;"> <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfamdlMePbZZvcr_u4zdGFgDsqNWFUGi3k6hqLxqmG_ZTqN8Q/viewform?embedded=true" width="1000" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p></body>
+      <body> <p style="font-family: 'Courier New', monospace;  color: #000000; font-size:25px"> &nbsp Fill out the form below if you would like to suggest anything: <br><br> </p> <p style="text-align: center;"> <form id="fs-frm" name="simple-suggestions-form" accept-charset="utf-8" action="https://formspree.io/f/mgeqnndq" method="post">
+  <fieldset id="fs-frm-inputs">
+    <label for="full-name">Full Name</label>
+    <input type="text" name="name" id="full-name" placeholder="First and Last" required="yes">
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="Your Email" required="yes">
+    <label for="message">What can we improve?</label>
+    <textarea rows="5" name="message" id="message" placeholder="Please let us know anything that we can be doing better." required="no"></textarea>
+    <label for="message">Is there anything you think we are doing well?</label>
+    <textarea rows="5" name="message" id="message" placeholder="Please let us know anything that we are doing that really enjoy" required="no"></textarea>
+     <label for="message">Is there any topic you think we should cover?</label>
+    <textarea rows="5" name="message" id="message" placeholder="Please let us know if there is any topic that you believe we should spread awareness about" required="no"></textarea>
+    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    <input type="hidden" name="_next" value="google.com" />
+  </fieldset>
+  <input type="submit" value="Submit">
+</form>
+<script>
+window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
+</script>
+        </p>
+      </body>
       <footer>
         &copy; 2022 Students for Humanitarian Awareness Club
       </footer>
