@@ -2,31 +2,37 @@
 <html lang="en">
   <head>
     <title>SHA website</title>
-     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style type="text/css">
       header, section, footer, aside, nav, article, figure, figcaption {
         display: block;}
       body {
-       color: black;
+
+        color: black;
               background-color: #9494b8;
-              background-size: contain;
-              background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
         background-position: center;
         font-family: Georgia, Times, serif;
         line-height: 1.4em;
         margin: 0px;}
       .wrapper {
+        padding-top: 150px;
         width: 1000px;
-        margin: 20px auto 20px auto;
+        margin-left: 100px;
         border: 2px solid #000000;
         background-color: #ffffff;}
-      header {
-       height: 160px;
+     header {
+        width: 1000px;
+        margin-left: 100px;
+        border-right: 2px solid #000000;
+        border-left: 2px solid #000000;
+        border-top: 2px solid #000000;
+      position: fixed;
+      z-index: 1000;
+        height: 160px;
         background-color: #d9d9d9 ;
         font-family: baskerville, serif;
-        font-size: 120%;}
+        font-size: 120%;
+        }
         form input,
 form select,
 form textarea,
@@ -94,11 +100,14 @@ form [type="reset"]:focus {
 
 form select {
   text-transform: none;}
-      h1 {
+     h1 {
+        z-index: 1000;
+        position: fixed;
         text-indent: -9999px;
         width: 940px;
         height: 130px;
-        margin: 0px;}
+        margin: 0px;
+          }
       nav, footer {
         clear: both;
         color: #ffffff;
@@ -114,7 +123,7 @@ form select {
         color: #ffffff;}
       nav li a:hover, nav li a.current {
         color: #000000;}
-      section.courses {
+      section.research {
         float: left;
         width: 659px;
         border-right: 1px solid #eeeeee;}
@@ -161,30 +170,28 @@ form select {
         color: #de6581;}
       footer {
         font-size: 80%;
-        padding: 7px 0px 0px 20px;
-       font-family: Georgia, Times, serif;}
-       .header img {
+        padding: 7px 0px 0px 20px;}
+        .header img {
            float: left;
            width: 130px;
             height: 130px;
-           background: #555; }
+           background: #555;  
+           mix-blend-mode: multiply;}
 .header h1 {
   position: relative;
   left: 10px;
 }
-img{ 
-mix-blend-mode: multiply; }
     </style>
-   </head>
-  <body>
-    <div class="wrapper">
-      <header>
+  </head>
+  <header>
   <div class="header">
-<h1> <a href="index.html">
+<h1> <a href="putin.html">
   <img src="newlogo.jpg" alt="logo" /> 
 </a>
 <br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp Students for Humanitarian Awareness Club</h1>
-        <nav>
+</div>
+       <body>
+              <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="previoustopics.html">Previous Topics</a></li>
@@ -193,7 +200,8 @@ mix-blend-mode: multiply; }
           </ul>
         </nav>
       </header>
-      <body> <p style="font-family: 'Courier New', monospace;  color: #000000; font-size:25px"> &nbsp Fill out the form below if you would like to suggest anything: <br><br> </p> <p style="text-align: center;"> 
+      <div class="wrapper">
+      <p style="font-family: 'Courier New', monospace;  color: #000000; font-size:25px"> &nbsp Fill out the form below if you would like to suggest anything: <br><br> </p> <p style="text-align: center;"> 
         <form id="fs-frm" name="simple-suggestions-form" accept-charset="utf-8" action="https://formspree.io/f/xgeqnnqq" method="post">
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Full Name</label>
