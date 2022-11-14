@@ -4,7 +4,7 @@
     <title>SHA Lane Tech</title>
        <meta charset="utf-8">
      <link rel="icon" href="favicon.ico?" type="image/x-icon">
-    <style type="text/css">
+    <style>
       header, section, footer, aside, nav, article, figure, figcaption {
         display: block;}
       body {
@@ -27,7 +27,6 @@
               right: 0;
         border-right: 2px solid #000000;
         border-left: 2px solid #000000;
-        border-sticky: 2px solid #000000;
       position: fixed;
         height: 120px;
         background-color: #36344B ;
@@ -129,11 +128,10 @@
   <header>
   <div class="header">
 <h1> <a href="index.html">
-  <img src="newlogo.jpg" alt="logo" /> 
+  <img src="newlogo.jpg" alt="logo"> 
 </a>
 <br><br><br>Students for Humanitarian Awareness</h1>
 </div>
-       <body>
               <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -144,10 +142,10 @@
         </nav>
       </header>
       <div class="wrapper">
-      <body><section class="courses">
+  <section class="courses">
         <article>
           <figure>
-    <img src="https://cdn.cfr.org/sites/default/files/styles/immersive_image_3_2_desktop_2x/public/image/2020/02/Ukraine.jpg.webp" alt="Ukrainian soldiers raising their flag" width="290" height="200"/>
+    <img src="https://cdn.cfr.org/sites/default/files/styles/immersive_image_3_2_desktop_2x/public/image/2020/02/Ukraine.jpg.webp" alt="Ukrainian soldiers raising their flag" width="290" height="200">
           </figure>
           <hgroup>
             <h2>Russian War Against <span id="ukraine" onclick="theFunction();myFunction()"> <span id="ukra" onclick="theFunction()">Ukra</span><span id="ine" onclick="myFunction()">ine</span> </span></h2>
@@ -157,7 +155,7 @@
             <br><br> -We donated nearly $2000 to Ukrainian refugees
            <br><br> -We spread awareness about the war to the Lane Tech community
           
-          <br> <pre class="wedo"> To donate to Ukraine in this ongoing war, please visit the <a href="https://www.selfreliance.com/supportukraine/ukraine-relief-fund.php" target="_blank">Ukraine Selfreliance Fund </pre>
+          <br> <p class="wedo"> To donate to Ukraine in this ongoing war, please visit the <a href="https://www.selfreliance.com/supportukraine/ukraine-relief-fund.php" target="_blank">Ukraine Selfreliance Fund
           </a></p>
         </article>    
       </section>
@@ -168,7 +166,6 @@ function theFunction() {
 function myFunction() {
   document.getElementById("ine").style.color = "#e6e600";}
 </script>
-</body>
       <footer>
         &copy; 2022 Students for Humanitarian Awareness Club
       </footer>
