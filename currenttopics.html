@@ -3,9 +3,13 @@
   <head>
     <title>SHA Lane Tech</title>
        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
      <link rel="icon" href="favicon.ico?" type="image/x-icon">
     <style>
-      header, section, footer, aside, nav, article, figure, figcaption {
+.wedo {
+        font-size: 120%;
+          text-align: center; }
+          header, section, footer, aside, nav, article, figure, figcaption {
         display: block;}
       body {
         color: black;
@@ -13,22 +17,21 @@
         background-position: center;
         font-family: Georgia, Times, serif;
         line-height: 1.4em;
-        margin: 0px;}
+        margin: 0px;
+      }
       .wrapper {
-        padding-top: 150px;
-        width: auto;
+        padding-top: 10%;
+        width: 100%;
         margin: 0 auto;
-        border: 2px solid #000000;
-        background-color: #ffffff;}
+        background-color: #ffffff;
+        font-size: 100%}
       header {
-        width: auto;
+        width: 100%;
         margin: 0 auto;
           left: 0;
               right: 0;
-        border-right: 2px solid #000000;
-        border-left: 2px solid #000000;
       position: fixed;
-        height: 120px;
+        height: 18%;
         background-color: #36344B ;
         font-family: baskerville, serif;
         font-size: 120%;
@@ -37,8 +40,8 @@
         z-index: 1000;
         position: fixed;
         text-indent: -9999px;
-        width: auto;
-        height: 100px;
+        width: 100%;
+        height: 200%;
         margin: 0px;
           }
       nav, footer {
@@ -48,7 +51,7 @@
         height: 30px;}
       nav ul {
         margin: 0px;
-        padding: 5px 0px 5px 30px;}
+        padding: 5px 0px 5px 3px;}
       nav li {
         display: inline;
         margin-right: 40px;}
@@ -109,9 +112,8 @@
         padding: 7px 0px 0px 20px;}
         .header a img {
            float: left;
-           width: 150px;
-            height: 130px; 
-           height: 120px;
+           width: 11%;
+           height: 100%;
            padding-left: 200px;}
 .header h1 {
   font-family: Georgia, serif;
@@ -120,9 +122,120 @@
   left: -180px;
   text-align: center;
 }
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; 
+  position: fixed; 
+  z-index: 10000000; 
+  top: 0;
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  display: none;
+}
+
+.openbtn {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+     @media only screen and (max-width: 400px) {
+   header {
+    height: 15%;
+    width: 100%;
+   }
+.wrapper {
+  padding-top: 25%;
+  width: 100%;
+  text-align: center;
+}
+body{
+  width: 100%;
+}
+section.research {
+  padding-right: 0px;
+  border-right: 0px;
+  width: 100%;
+}
+nav {
+  font-size: 0px;
+  height: 0px;
+}
+section.top {
+  height: 0px;
+}
+h1 {
+  font-size: 0px;
+}
+.wrapper img {
+  height: 0px;
+}
+.wrapper figcaption {
+  font-size: 0px;
+}
+.wrapper figure {
+  height: 0px;
+  display: none;
+}
 .wedo {
-        font-size: 120%;
-          text-align: center; }
+  margin-top: -5%;
+}
+.header a img {
+           float: left;
+           width: 30%;
+           height: 400%;}
+  .sidebar {padding-top: -195px;}
+  .sidebar a {font-size: 18px;}
+  .openbtn {
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  margin-left: 250px;
+  border: none;
+  display: block;
+  transform: translateY(-120%);
+}
+}
     </style>
   </head>
   <body>
@@ -131,7 +244,16 @@
 <h1> <a href="index.html">
   <img src="newlogo.jpg" alt="logo"> 
 </a>
-<br><br><br>Students for Humanitarian Awareness</h1>
+<br><br> Students for Humanitarian Awareness</h1>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="currenttopics.html">Current Topics</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="suggestions.html">Suggestions</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776;Tabs</button>
 </div>
               <nav>
           <ul>
@@ -155,7 +277,6 @@
             <br><br><br><p class="wedo">What we accomplished:
             <br><br> -We donated nearly $2000 to Ukrainian refugees
            <br><br> -We spread awareness about the war to the Lane Tech community
-          
           <br> <p class="wedo"> To donate to Ukraine in this ongoing war, please visit the <a href="https://www.selfreliance.com/supportukraine/ukraine-relief-fund.php" target="_blank">Ukraine Selfreliance Fund
           </a></p>
         </article>    
@@ -166,7 +287,18 @@ function theFunction() {
 }
 function myFunction() {
   document.getElementById("ine").style.color = "#e6e600";}
-</script>
+       /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+    </script>
       <footer>
         &copy; 2022 Students for Humanitarian Awareness Club
       </footer>
