@@ -3,6 +3,7 @@
   <head>
     <title>SHA Lane Tech</title>
        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
      <link rel="icon" href="favicon.ico?" type="image/x-icon">
     <style>
       header, section, footer, aside, nav, article, figure, figcaption {
@@ -13,22 +14,21 @@
         background-position: center;
         font-family: Georgia, Times, serif;
         line-height: 1.4em;
-        margin: 0px;}
+        margin: 0px;
+      }
       .wrapper {
-        padding-top: 150px;
-        width: auto;
+        padding-top: 10%;
+        width: 100%;
         margin: 0 auto;
-        border: 2px solid #000000;
-        background-color: #ffffff;}
+        background-color: #ffffff;
+        font-size: 100%}
       header {
-        width: auto;
+        width: 100%;
         margin: 0 auto;
           left: 0;
               right: 0;
-        border-right: 2px solid #000000;
-        border-left: 2px solid #000000;
       position: fixed;
-        height: 120px;
+        height: 18%;
         background-color: #36344B ;
         font-family: baskerville, serif;
         font-size: 120%;
@@ -37,8 +37,8 @@
         z-index: 1000;
         position: fixed;
         text-indent: -9999px;
-        width: auto;
-        height: 100px;
+        width: 100%;
+        height: 200%;
         margin: 0px;
           }
       nav, footer {
@@ -48,7 +48,7 @@
         height: 30px;}
       nav ul {
         margin: 0px;
-        padding: 5px 0px 5px 30px;}
+        padding: 5px 0px 5px 3px;}
       nav li {
         display: inline;
         margin-right: 40px;}
@@ -109,8 +109,8 @@
         padding: 7px 0px 0px 20px;}
         .header a img {
            float: left;
-           width: 150px;
-           height: 120px;
+           width: 11%;
+           height: 100%;
            padding-left: 200px;}
 .header h1 {
   font-family: Georgia, serif;
@@ -119,83 +119,218 @@
   left: -180px;
   text-align: center;
 }
-		</style>
-	</head>
-	<body>
-	<header>
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; 
+  position: fixed; 
+  z-index: 10000000; 
+  top: 0;
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  display: none;
+}
+
+.openbtn {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+@media only screen and (max-width: 400px) {
+   header {
+    height: 15%;
+    width: 100%;
+   }
+.wrapper {
+  padding-top: 25%;
+  width: 100%;
+}
+body{
+  width: 100%;
+}
+section.research {
+  padding-right: 0px;
+  border-right: 0px;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  height: 0px;
+  font-size: 0px;
+}
+section.top {
+  height: 0px;
+}
+h1 {
+  font-size: 0px;
+}
+.wrapper img {
+  height: 0px;
+}
+.wrapper figcaption {
+  font-size: 0px;
+}
+.wrapper figure {
+  height: 0px;
+  display: none;
+
+}
+.header a img {
+           float: left;
+           width: 30%;
+           height: 400%;}
+  .sidebar {padding-top: -195px;}
+  .sidebar a {font-size: 18px;}
+  .openbtn {
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  margin-left: 250px;
+  border: none;
+  display: block;
+  transform: translateY(-120%);
+}
+}
+    </style>
+  </head>
+  <body>
+  <header>
   <div class="header">
 <h1> <a href="index.html">
   <img src="newlogo.jpg" alt="logo"> 
 </a>
-<br><br><br>Students for Humanitarian Awareness</h1>
+<br><br> Students for Humanitarian Awareness</h1>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="currenttopics.html">Current Topics</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="suggestions.html">Suggestions</a>
 </div>
-     			    <nav>
-					<ul>
-						<li><a href="index.html" class="current">Home</a></li>
-						<li><a href="currenttopics.html">Current Topics</a></li>
-						<li><a href="aboutus.html">About Us</a></li>
-						<li><a href="suggestions.html">Suggestions</a></li>
-					</ul>
-				</nav>
-			</header>
-	    <div class="wrapper">
-			<section class="research">
-				<article>
-					<figure>
-						<img src="https://cdn.technologyadvice.com/wp-content/uploads/2017/08/Fotolia_98303431_Subscription_Monthly_M-699x408.jpg" alt="construction" width="290" height="200">
-						<figcaption>Maintenance</figcaption>
-					</figure>
-					<hgroup>
-						<h2>Coming Soon</h2>
-					</hgroup>
-					<p> This page is under construction </p>
-				</article>    
-				<article>
-					<figure>
-						<img src="https://www.assp.org/images/default-source/default-album/construction_main.jpg?sfvrsn=2d42fa47_1" alt="construction" width="290" height="200">
-						<figcaption>Maintenance</figcaption>
-					</figure>
-					<hgroup>
-						<h2>Coming Soon</h2>
-					</hgroup>
-					<p> This page is under construction </p>
-				</article>    
-				<article>
-					<figure>
-						<img src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/how-to-start-a-construction-company-hero.webp" alt="construction" width="290" height="200">
-						<figcaption>Maintenance</figcaption>
-					</figure>
-					<hgroup>
-						<h2>Coming Soon</h2>
-					</hgroup>
-					<p> This page is under construction </p>
-				</article>   
-			</section>
-			<aside>
-				<section class="related-links">
-					<h2>Related links</h2>
-					<a href="https://www.peopleinneed.net/repairing-9-000-houses-and-water-pipes-9333gp" target="_blank">Ukraine</a>
-					<a href="https://www.peopleinneed.net/providing-free-medical-care-for-syrian-children-9335gp" target="_blank">Syria</a>
-					<a href="https://www.peopleinneed.net/new-website-launched-to-support-civil-society-in-nepal-9403gp" target="_blank">Nepal</a>
-					<a href="https://www.peopleinneed.net/providing-clean-water-in-ethiopia-9427gp" target="_blank">Ethiopia</a>
-				</section>
-				<section class="contact-details">
-					<h2>Contact</h2>
-					<p> <a href="mailto:kpezan2@cps.edu" target="_blank">Kolby</a> 
-						<a href="mailto:DMORENO52@cps.edu" target="_blank">Damian</a>
-						<a href="mailto:nboyechko@cps.edu" target="_blank">Nadyia</a>
-						<a href="mailto:gbescobar@cps.edu" target="_blank">Mrs. Escobar</a>
-						<a href="mailto:ltshaclub@gmail.com" target="_blank">Club Email</a> </p>
-				</section>
-				<section class="contact-details">
-					<h2>Social Media</h2>
-					<p> <a href="https://www.instagram.com/ltshaclub/" target="_blank">Instagram</a> 
-						<a href="https://www.tiktok.com/@ltshaclub?is_from_webapp=1&sender_device=pc" target="_blank">Tiktok</a></p>
-				</section>
-			</aside>
-			<footer>
-				&copy; 2022 Students for Humanitarian Awareness Club
-			</footer>
-		</div><!-- .wrapper -->
-	</body>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776;Tabs</button>
+</div>
+              <nav>
+          <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="currenttopics.html">Current Topics</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="suggestions.html">Suggestions</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="wrapper">
+      <section class="research">
+        <article>
+          <figure>
+            <img src="https://cdn.technologyadvice.com/wp-content/uploads/2017/08/Fotolia_98303431_Subscription_Monthly_M-699x408.jpg" alt="construction" width="290" height="200">
+            <figcaption>Maintenance</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Coming Soon</h2>
+          </hgroup>
+          <p> This page is under construction </p>
+        </article>    
+        <article>
+          <figure>
+            <img src="https://www.assp.org/images/default-source/default-album/construction_main.jpg?sfvrsn=2d42fa47_1" alt="construction" width="290" height="200">
+            <figcaption>Maintenance</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Coming Soon</h2>
+          </hgroup>
+          <p> This page is under construction </p>
+        </article>    
+        <article>
+          <figure>
+            <img src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/how-to-start-a-construction-company-hero.webp" alt="construction" width="290" height="200">
+            <figcaption>Maintenance</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Coming Soon</h2>
+          </hgroup>
+          <p> This page is under construction </p>
+        </article>   
+      </section>
+      <aside>
+        <section class="related-links">
+          <h2>Related links</h2>
+          <a href="https://www.peopleinneed.net/repairing-9-000-houses-and-water-pipes-9333gp" target="_blank">Ukraine</a>
+          <a href="https://www.peopleinneed.net/providing-free-medical-care-for-syrian-children-9335gp" target="_blank">Syria</a>
+          <a href="https://www.peopleinneed.net/new-website-launched-to-support-civil-society-in-nepal-9403gp" target="_blank">Nepal</a>
+          <a href="https://www.peopleinneed.net/providing-clean-water-in-ethiopia-9427gp" target="_blank">Ethiopia</a>
+        </section>
+        <section class="contact-details">
+          <h2>Contact</h2>
+          <p> <a href="mailto:kpezan2@cps.edu" target="_blank">Kolby</a> 
+            <a href="mailto:DMORENO52@cps.edu" target="_blank">Damian</a>
+            <a href="mailto:nboyechko@cps.edu" target="_blank">Nadyia</a>
+            <a href="mailto:gbescobar@cps.edu" target="_blank">Mrs. Escobar</a>
+            <a href="mailto:ltshaclub@gmail.com" target="_blank">Club Email</a> </p>
+        </section>
+        <section class="contact-details">
+          <h2>Social Media</h2>
+          <p> <a href="https://www.instagram.com/ltshaclub/" target="_blank">Instagram</a> 
+            <a href="https://www.tiktok.com/@ltshaclub?is_from_webapp=1&sender_device=pc" target="_blank">Tiktok</a></p>
+        </section>
+      </aside>
+      <footer>
+        &copy; 2022 Students for Humanitarian Awareness Club
+      </footer>
+    </div><!-- .wrapper -->
+    <script type="text/javascript">
+       /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+    </script>
+  </body>
 </html>
