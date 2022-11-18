@@ -131,7 +131,7 @@
   right: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  padding-top: 100px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
@@ -149,6 +149,7 @@
 .sidebar a:hover {
   color: #f1f1f1;
 }
+
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
@@ -156,6 +157,7 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 /* The button used to open the sidebar */
@@ -178,7 +180,7 @@
   transition: margin-left .5s; /* If you want a transition effect */
   padding: 20px;
 }
-     @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
    header {
     height: 15%;
     width: 100%;
@@ -191,14 +193,9 @@
 body{
   width: 100%;
 }
-section.research {
-  padding-right: 0px;
-  border-right: 0px;
-  width: 100%;
-}
 nav {
-  font-size: 0px;
   height: 0px;
+  font-size: 0px;
 }
 section.top {
   height: 0px;
@@ -215,16 +212,21 @@ h1 {
 .wrapper figure {
   height: 0px;
   display: none;
-}
-.wedo {
-  margin-top: -5%;
+
 }
 .header a img {
            float: left;
            width: 30%;
            height: 400%;}
   .sidebar {padding-top: -195px;}
-  .sidebar a {font-size: 18px;}
+  .sidebar a {font-size: 25px;
+        margin-top: 5px;
+        padding: 25px;
+        border: 1px solid #eeeeee;
+        }
+       .sidebar .closebtn { 
+        border: none; 
+        }
   .openbtn {
   font-size: 25px;
   cursor: pointer;
