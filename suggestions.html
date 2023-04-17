@@ -17,7 +17,7 @@
         margin: 0px;
       }
       .wrapper {
-        padding-top: 10%;
+        padding-top: 12%;
         width: 100%;
         margin: 0 auto;
         background-color: #ffffff;
@@ -41,11 +41,22 @@
         height: 200%;
         margin: 0px;
           }
-      nav, footer {
+     footer {
         clear: both;
         color: #ffffff;
         background-color: #aeaca8;
         height: 30px;}
+#navbar { 
+        margin-top: 1%;
+        overflow: hidden;
+        clear: both;
+        color: #ffffff;
+        background-color: #aeaca8;
+  transition: 0.3s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  z-index: 9999999999999999;
+       }
       nav ul {
         margin: 0px;
         padding: 5px 0px 5px 3px;
@@ -120,124 +131,7 @@
   left: -180px;
   text-align: center;
 }
-.sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 0; 
-  position: fixed; 
-  z-index: 10000000; 
-  top: 0;
-  right: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 100px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-}
-
-/* The sidebar links */
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-}
-
-/* The button used to open the sidebar */
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-  border: none;
-  display: none;
-}
-.openbtn {
-  background-color: #444;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s; /* If you want a transition effect */
-  padding: 20px;
-}
-@media only screen and (max-width: 500px) {
-   header {
-    height: 15%;
-    width: 100%;
-   }
-.wrapper {
-  padding-top: 25%;
-  width: 100%;
-  text-align: center;
-}
-body{
-  width: 100%;
-}
-nav {
-  height: 0px;
-  font-size: 0px;
-}
-section.top {
-  height: 0px;
-}
-h1 {
-  font-size: 0px;
-}
-.wrapper img {
-  height: 0px;
-}
-.wrapper figcaption {
-  font-size: 0px;
-}
-.wrapper figure {
-  height: 0px;
-  display: none;
-
-}
-.header a img {
-           float: left;
-           width: 30%;
-           height: 100%;
-           padding-left: 200px;
-         }
-  .sidebar {padding-top: -195px;}
-  .sidebar a {font-size: 25px;
-        margin-top: 5px;
-        padding: 25px;
-        border: 1px solid #eeeeee;
-        }
-       .sidebar .closebtn { 
-        border: none; 
-        }
-   .openbtn {
-    font-size: 300%;
-  cursor: pointer;
-  background-color: #36344B;
-  color: white;
-  margin-left: 70%;
-  border: none;
-  display: block;
-  transform: translateY(-140%);
-  background-size: cover;
-  margin-top: 7%;
-}
-}
-        form input,
+  form input,
 form select,
 form textarea,
 form fieldset,
@@ -304,6 +198,202 @@ form [type="reset"]:focus {
 
 form select {
   text-transform: none;}
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; 
+  position: fixed; 
+  z-index: 10000000; 
+  top: 0;
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 100px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  display: none;
+}
+.openbtn {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+@media only screen and (max-width: 900px) {
+   header {
+    height: 15%;
+    width: 100%;
+   }
+.wrapper {
+  padding-top: 15%;
+  width: 100%;
+}
+body{
+  width: 100%;
+}
+section.research {
+  padding-right: 0px;
+  border-right: 0px;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  height: 0px;
+  font-size: 0px;
+}
+section.top {
+  height: 0px;
+}
+h1 {
+  font-size: 0px;
+}
+.wrapper img {
+  height: 0px;
+}
+.wrapper figcaption {
+  font-size: 0px;
+}
+.wrapper figure {
+  height: 0px;
+  display: none;
+
+}
+.header a img {
+           float: left;
+           width: 15%;
+           height: 100%;
+           padding-left: 200px;
+         }
+  .sidebar {padding-top: -195px;}
+  .sidebar a {font-size: 25px;
+        margin-top: 5px;
+        padding: 25px;
+        border: 1px solid #eeeeee;
+        }
+       .sidebar .closebtn { 
+        border: none; 
+        }
+  .openbtn {
+    font-size: 300%;
+  cursor: pointer;
+  background-color: #36344B;
+  color: white;
+  margin-left: 70%;
+  border: none;
+  display: block;
+  transform: translateY(-140%);
+  background-size: cover;
+  margin-top: 7%;
+}
+#navbar {
+  display: none;
+}
+}
+@media only screen and (max-width: 500px) {
+   header {
+    height: 15%;
+    width: 100%;
+   }
+.wrapper {
+  padding-top: 25%;
+  width: 100%;
+}
+body{
+  width: 100%;
+}
+section.research {
+  padding-right: 0px;
+  border-right: 0px;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  height: 0px;
+  font-size: 0px;
+}
+section.top {
+  height: 0px;
+}
+h1 {
+  font-size: 0px;
+}
+.wrapper img {
+  height: 0px;
+}
+.wrapper figcaption {
+  font-size: 0px;
+}
+.wrapper figure {
+  height: 0px;
+  display: none;
+
+}
+.header a img {
+           float: left;
+           width: 25%;
+           height: 100%;
+           padding-left: 200px;
+         }
+  .sidebar {padding-top: -195px;}
+  .sidebar a {font-size: 25px;
+        margin-top: 5px;
+        padding: 25px;
+        border: 1px solid #eeeeee;
+        }
+       .sidebar .closebtn { 
+        border: none; 
+        }
+  .openbtn {
+    font-size: 300%;
+  cursor: pointer;
+  background-color: #36344B;
+  color: white;
+  margin-left: 70%;
+  border: none;
+  display: block;
+  transform: translateY(-140%);
+  background-size: cover;
+  margin-top: 7%;
+}
+#navbar {
+  display: none;
+}
+}
+}
     </style>
   </head>
   <body>
@@ -324,6 +414,7 @@ form select {
 <div id="main">
   <button class="openbtn" onclick="openNav()">&#9776;</button>
 </div>
+              <div id="navbar">
               <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -333,6 +424,7 @@ form select {
             <li><a href="shop.html">Shop</a></li>
           </ul>
         </nav>
+      </div>
       </header>
       <div class="wrapper">
       <p style="font-family: 'Courier New', monospace;  color: #000000; font-size:25px"> &nbsp;Fill out the form below if you would like to suggest anything: <br><br> </p> <p style="text-align: center;"> 
@@ -369,6 +461,16 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+}
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.height = "35px";
+  } else {
+    document.getElementById("navbar").style.height = "0px";
+  }
+  prevScrollpos = currentScrollPos;
 }
 </script>
       <footer>
