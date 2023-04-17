@@ -17,7 +17,7 @@
         margin: 0px;
       }
       .wrapper {
-        padding-top: 10%;
+        padding-top: 12%;
         width: 100%;
         margin: 0 auto;
         background-color: #ffffff;
@@ -41,11 +41,22 @@
         height: 200%;
         margin: 0px;
           }
-      nav, footer {
+      footer {
         clear: both;
         color: #ffffff;
         background-color: #aeaca8;
         height: 30px;}
+#navbar { 
+        margin-top: 1%;
+        overflow: hidden;
+        clear: both;
+        color: #ffffff;
+        background-color: #aeaca8;
+  transition: 0.3s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  z-index: 9999999999999999;
+       }
       nav ul {
         margin: 0px;
         padding: 5px 0px 5px 3px;
@@ -171,6 +182,76 @@
   transition: margin-left .5s; /* If you want a transition effect */
   padding: 20px;
 }
+@media only screen and (max-width: 900px) {
+   header {
+    height: 15%;
+    width: 100%;
+   }
+.wrapper {
+  padding-top: 15%;
+  width: 100%;
+}
+body{
+  width: 100%;
+}
+section.research {
+  padding-right: 0px;
+  border-right: 0px;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  height: 0px;
+  font-size: 0px;
+}
+section.top {
+  height: 0px;
+}
+h1 {
+  font-size: 0px;
+}
+.wrapper img {
+  height: 0px;
+}
+.wrapper figcaption {
+  font-size: 0px;
+}
+.wrapper figure {
+  height: 0px;
+  display: none;
+
+}
+.header a img {
+           float: left;
+           width: 15%;
+           height: 100%;
+           padding-left: 200px;
+         }
+  .sidebar {padding-top: -195px;}
+  .sidebar a {font-size: 25px;
+        margin-top: 5px;
+        padding: 25px;
+        border: 1px solid #eeeeee;
+        }
+       .sidebar .closebtn { 
+        border: none; 
+        }
+  .openbtn {
+    font-size: 300%;
+  cursor: pointer;
+  background-color: #36344B;
+  color: white;
+  margin-left: 70%;
+  border: none;
+  display: block;
+  transform: translateY(-140%);
+  background-size: cover;
+  margin-top: 7%;
+}
+#navbar {
+  display: none;
+}
+}
 @media only screen and (max-width: 500px) {
    header {
     height: 15%;
@@ -212,7 +293,7 @@ h1 {
 }
 .header a img {
            float: left;
-           width: 30%;
+           width: 25%;
            height: 100%;
            padding-left: 200px;
          }
@@ -237,6 +318,10 @@ h1 {
   background-size: cover;
   margin-top: 7%;
 }
+#navbar {
+  display: none;
+}
+}
 }
     </style>
   </head>
@@ -258,6 +343,7 @@ h1 {
 <div id="main">
   <button class="openbtn" onclick="openNav()">&#9776;</button>
 </div>
+              <div id="navbar">
               <nav>
           <ul>
             <li><a href="index.html" class="current">Home</a></li>
@@ -267,6 +353,7 @@ h1 {
             <li><a href="shop.html">Shop</a></li>
           </ul>
         </nav>
+      </div>
       </header>
       <div class="wrapper">
       <section class="research">
@@ -338,6 +425,18 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+}
+window.onscroll = function() {scrollFunction()};
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.height = "35px";
+  } else {
+    document.getElementById("navbar").style.height = "0px";
+  }
+  prevScrollpos = currentScrollPos;
 }
     </script>
   </body>
